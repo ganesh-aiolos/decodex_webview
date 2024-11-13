@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DoctorApp</string>
+    <string name="facebook_app_id">795791297925219</string>
+    <string name="fb_login_protocol_scheme">fb795791297925219</string>
+
+    <!--Prod Creds-->
+    <string name="fcm_sender_id">230551519853</string>
+   // <string name="pushwoosh_id">E011B-8333F</string>
+
+    <!--DEv Creds-->
+    <!--    <string name="fcm_sender_id">563788486295</string>-->
+    <!--    <string name="pushwoosh_id">6512C-5A118</string>-->
+
+    <string name="flutter_downloader_notification_started">Download started</string>
+    <string name="flutter_downloader_notification_in_progress">Download in progress</string>
+    <string name="flutter_downloader_notification_canceled">Download canceled</string>
+    <string name="flutter_downloader_notification_failed">Download failed</string>
+    <string name="flutter_downloader_notification_complete">Download complete</string>
+    <string name="flutter_downloader_notification_paused">Download paused</string>
+
+
+
+
+</resources>

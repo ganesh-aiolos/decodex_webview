@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "324092733495",
+    "project_id": "lilac-doctor-app",
+    "storage_bucket": "lilac-doctor-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324092733495:android:0a1f72fa02357418cef7b2",
+        "android_client_info": {
+          "package_name": "com.lilacinsights.doctorsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "324092733495-o1eppd77mupi1eti6i4vsue3sl4ap14a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX3oXlE5Lgvx965Lwt72Jve_526q_4TR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "324092733495-o1eppd77mupi1eti6i4vsue3sl4ap14a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

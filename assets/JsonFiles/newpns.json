@@ -1,0 +1,2502 @@
+{
+  "flow": [
+    {
+      "name": "sampleCollectionDate",
+      "title": "Sample Collection Date",
+      "validation": [
+        "isRequired",
+        "isPastDate",
+        "lessThan"
+      ],
+      "validationValue": {
+        "lessThan": {
+          "lessThan": 8,
+          "type": "days"
+        }
+      },
+      "type": "date"
+    },
+    {
+      "name": "firstTrimesterScanDate",
+      "title": "First Trimester Scan Date",
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T1",
+            "T2",
+            "T7",
+            "T10",
+            "T5",
+            "T8",
+            "T3",
+            "T4"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "type": "date"
+    },
+    {
+      "name": "firstTrimesterScanDate",
+      "title": "First Trimester Scan Date",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "crl",
+          "trimesters": [
+            "Second"
+          ],
+          "tiers": [
+            "T6"
+          ]
+        }
+      },
+      "type": "date"
+    },
+    {
+      "name": "secondTrimesterScanDate",
+      "title": "Second Trimester Scan Date",
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T3",
+            "T4",
+            "T6"
+          ],
+          "trimesters": [
+            "Second"
+          ]
+        }
+      },
+      "type": "date"
+    },
+    {
+      "name": "patientOnHcg",
+      "title": "Patient On HCG",
+      "type": "radio",
+      "options": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T1",
+            "T2",
+            "T3",
+            "T4",
+            "T5",
+            "T7",
+            "T8",
+            "T10"
+          ]
+        }
+      }
+    },
+    {
+      "name": "dateOfHcg",
+      "title": "Date of HCG",
+      "type": "date",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "patientOnHcg",
+          "values": [
+            "Yes"
+          ]
+        }
+      }
+    },
+    {
+      "name": "fmfId",
+      "title": "FMF ID(Fetal Medicine Foundation)",
+      "validation": [],
+      "validationValue": {},
+      "type": "text"
+    },
+    {
+      "name": "presentPregnancy",
+      "title": "Present Pregnancy",
+      "type": "radio",
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T1",
+            "T5",
+            "T8"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "options": [
+        {
+          "value": "Singleton",
+          "label": "Singleton"
+        },
+        {
+          "value": "Twin",
+          "label": "Twin"
+        },
+        {
+          "value": "Vanishing Twin",
+          "label": "Vanishing Twin"
+        }
+      ]
+    },
+    {
+      "name": "presentPregnancy",
+      "title": "Present Pregnancy",
+      "type": "radio",
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T2",
+            "T7"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "options": [
+        {
+          "value": "Singleton",
+          "label": "Singleton"
+        }
+      ]
+    },
+    {
+      "name": "presentPregnancy",
+      "title": "Present Pregnancy",
+      "type": "radio",
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T10"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "options": [
+        {
+          "value": "Singleton",
+          "label": "Singleton"
+        },
+        {
+          "value": "Twin",
+          "label": "Twin"
+        }
+      ]
+    },
+    {
+      "name": "presentPregnancy",
+      "title": "Present Pregnancy",
+      "type": "radio",
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T4",
+            "T6"
+          ],
+          "trimesters": [
+            "Second"
+          ]
+        }
+      },
+      "options": [
+        {
+          "value": "Singleton",
+          "label": "Singleton"
+        }
+      ]
+    },
+    {
+      "name": "presentPregnancy",
+      "title": "Present Pregnancy",
+      "type": "radio",
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T3"
+          ],
+          "trimesters": [
+            "Second"
+          ]
+        }
+      },
+      "options": [
+        {
+          "value": "Singleton",
+          "label": "Singleton"
+        },
+        {
+          "value": "Twin",
+          "label": "Twin"
+        }
+      ]
+    },
+    {
+      "name": "crl",
+      "title": "CRL (in mm)",
+      "type": "number",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "presentPregnancy",
+          "values": [
+            "Singleton"
+          ],
+          "tiers": [
+            "T1",
+            "T2",
+            "T7",
+            "T10"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "nonMandatoryIf": {
+        "name": "presentPregnancy",
+        "values": [
+          "Singleton",
+          "Vanishing Twin"
+        ],
+        "tiers": [
+          "T5",
+          "T8"
+        ],
+        "trimesters": [
+          "First"
+        ]
+      }
+    },
+    {
+      "name": "crl",
+      "title": "CRL (in mm)",
+      "type": "number",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "presentPregnancy",
+          "values": [
+            "Vanishing Twin"
+          ],
+          "tiers": [
+            "T1"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      }
+    },
+    {
+      "notAField": true,
+      "validation": [
+        "atLeastOne"
+      ],
+      "validationValue": {
+        "atLeastOne": {
+          "tiers": [
+            "T3",
+            "T4",
+            "T6"
+          ],
+          "trimesters": [
+            "Second"
+          ],
+          "names": [
+            "crl",
+            "bpd",
+            "hc"
+          ],
+          "titles": [
+            "CRL",
+            "BPD",
+            "HC"
+          ]
+        }
+      }
+    },
+    {
+      "name": "nt",
+      "title": "NT",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "presentPregnancy",
+          "values": [
+            "Singleton",
+            "Vanishing Twin"
+          ],
+          "tiers": [
+            "T1"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "nonMandatoryIf": {
+        "tiers": [
+          "T2",
+          "T7",
+          "T8",
+          "T10"
+        ],
+        "trimesters": [
+          "First"
+        ]
+      },
+      "type": "number"
+    },
+    {
+      "name": "nasalBone",
+      "title": "Nasal Bone",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "presentPregnancy",
+          "values": [
+            "Singleton",
+            "Vanishing Twin"
+          ],
+          "tiers": [
+            "T1",
+            "T2",
+            "T7",
+            "T10"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "nonMandatoryIf": {
+        "tiers": [
+          "T8"
+        ],
+        "trimesters": [
+          "First"
+        ]
+      },
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "name": "nasalBone",
+      "title": "Nasal Bone",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "presentPregnancy",
+          "values": [
+            "Singleton",
+            "Vanishing Twin"
+          ],
+          "tiers": [
+            "T3",
+            "T4",
+            "T6"
+          ],
+          "trimesters": [
+            "Second"
+          ]
+        }
+      },
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "name": "twinType",
+      "title": "Twin Type",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "presentPregnancy",
+          "values": [
+            "Twin"
+          ],
+          "tiers": [
+            "T1",
+            "T8"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "nonMandatoryIf": {
+        "tiers": [
+          "T5"
+        ],
+        "name": "presentPregnancy",
+        "values": [
+          "Twin"
+        ]
+      },
+      "type": "radio",
+      "options": [
+        {
+          "label": "Dichorionic",
+          "value": "Dichorionic"
+        },
+        {
+          "label": "Monochorionic",
+          "value": "Monochorionic"
+        }
+      ]
+    },
+    {
+      "name": "twinType",
+      "title": "Twin Type",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "presentPregnancy",
+          "value": [
+            "Twin"
+          ],
+          "tiers": [
+            "T3"
+          ],
+          "trimesters": [
+            "Second"
+          ]
+        }
+      },
+      "type": "radio",
+      "options": [
+        {
+          "label": "Monochorionic",
+          "value": "Monochorionic"
+        }
+      ]
+    },
+    {
+      "name": "monochorionicType",
+      "title": "Monochorionic Type",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "twinType",
+          "values": [
+            "Monochorionic"
+          ]
+        }
+      },
+      "type": "radio",
+      "options": [
+        {
+          "label": "MCMA",
+          "value": "MCMA"
+        },
+        {
+          "label": "MCDA",
+          "value": "MCDA"
+        }
+      ]
+    },
+    {
+      "name": "twin1Crl",
+      "title": "Twin-1 CRL (in mm)",
+      "type": "number",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "presentPregnancy",
+          "values": [
+            "Twin"
+          ],
+          "tiers": [
+            "T1"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "nonMandatoryIf": {
+        "tiers": [
+          "T5",
+          "T8",
+          "T10"
+        ],
+        "trimesters": [
+          "First"
+        ],
+        "name": "presentPregnancy",
+        "values": [
+          "Twin"
+        ]
+      }
+    },
+    {
+      "notAField": true,
+      "name": "twin1Crl",
+      "validation": [
+        "atLeastOne"
+      ],
+      "validationValue": {
+        "atLeastOne": {
+          "tiers": [
+            "T2",
+            "T3",
+            "T4",
+            "T6",
+            "T7"
+          ],
+          "trimesters": [
+            "Second"
+          ],
+          "names": [
+            "twin1Crl",
+            "twin1Bpd",
+            "twin1Hc"
+          ],
+          "titles": [
+            "Twin-1 CRL",
+            "Twin-1 BPD",
+            "Twin-1 HC"
+          ]
+        }
+      }
+    },
+    {
+      "name": "twin2Crl",
+      "title": "Twin-2 CRL (in mm)",
+      "type": "number",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "presentPregnancy",
+          "values": [
+            "Twin"
+          ],
+          "tiers": [
+            "T1"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "nonMandatoryIf": {
+        "tiers": [
+          "T5",
+          "T8",
+          "T10"
+        ],
+        "trimesters": [
+          "First"
+        ],
+        "name": "presentPregnancy",
+        "values": [
+          "Twin"
+        ]
+      }
+    },
+    {
+      "notAField": true,
+      "name": "twin2Crl",
+      "validation": [
+        "atLeastOne"
+      ],
+      "validationValue": {
+        "atLeastOne": {
+          "tiers": [
+            "T2",
+            "T3",
+            "T4",
+            "T6",
+            "T7"
+          ],
+          "trimesters": [
+            "Second"
+          ],
+          "names": [
+            "twin2Crl",
+            "twin2Bpd",
+            "twin2Hc"
+          ],
+          "titles": [
+            "Twin-2 CRL",
+            "Twin-2 BPD",
+            "Twin-2 HC"
+          ]
+        }
+      }
+    },
+    {
+      "name": "twin1Nt",
+      "title": "Twin-1 NT (in mm)",
+      "type": "number",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "presentPregnancy",
+          "values": [
+            "Twin"
+          ],
+          "tiers": [
+            "T1"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "nonMandatoryIf": {
+        "tiers": [
+          "T5",
+          "T8",
+          "T10"
+        ],
+        "trimesters": [
+          "First"
+        ],
+        "name": "presentPregnancy",
+        "values": [
+          "Twin"
+        ]
+      }
+    },
+    {
+      "name": "twin2Nt",
+      "title": "Twin-2 NT (in mm)",
+      "type": "number",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "presentPregnancy",
+          "values": [
+            "Twin"
+          ],
+          "tiers": [
+            "T1"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "nonMandatoryIf": {
+        "tiers": [
+          "T5",
+          "T8",
+          "T10"
+        ],
+        "trimesters": [
+          "First"
+        ],
+        "name": "presentPregnancy",
+        "values": [
+          "Twin"
+        ]
+      }
+    },
+    {
+      "name": "twin1Nb",
+      "title": "Twin-1 NB (in mm)",
+      "type": "number",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "presentPregnancy",
+          "values": [
+            "Twin"
+          ],
+          "tiers": [
+            "T1"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "nonMandatoryIf": {
+        "tiers": [
+          "T8",
+          "T10"
+        ],
+        "trimesters": [
+          "First"
+        ],
+        "name": "presentPregnancy",
+        "values": [
+          "Twin"
+        ]
+      }
+    },
+    {
+      "name": "twin2Nb",
+      "title": "Twin-2 NB (in mm)",
+      "type": "number",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "presentPregnancy",
+          "values": [
+            "Twin"
+          ],
+          "tiers": [
+            "T1"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "nonMandatoryIf": {
+        "tiers": [
+          "T8",
+          "T10"
+        ],
+        "trimesters": [
+          "First"
+        ],
+        "name": "presentPregnancy",
+        "values": [
+          "Twin"
+        ]
+      }
+    },
+    {
+      "name": "bpd",
+      "title": "BPD",
+      "type": "number",
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "name": "presentPregnancy",
+        "values": [
+          "Singleton"
+        ],
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "hc",
+      "title": "HC",
+      "type": "number",
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "name": "presentPregnancy",
+        "values": [
+          "Singleton"
+        ],
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "twin1Bpd",
+      "title": "Twin-1 BPD (in mm)",
+      "type": "number",
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "name": "twinType",
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "twin2Bpd",
+      "title": "Twin-2 BPD (in mm)",
+      "type": "number",
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "name": "twinType",
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "twin1Hc",
+      "title": "Twin-1 HC (in mm)",
+      "type": "number",
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "name": "twinType",
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "twin2Hc",
+      "title": "Twin-2 HC (in mm)",
+      "type": "number",
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "name": "twinType",
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "usgCorrEdd",
+      "title": "USG/Corr EDD",
+      "type": "date",
+      "validation": [
+        "isPastDate",
+        "greaterThan"
+      ],
+      "validationValue": {
+        "greaterThan": {
+          "name": "sampleCollectionDate",
+          "label": "Sample Collection Date",
+          "type": "days"
+        }
+      }
+    },
+    {
+      "name": "gravida",
+      "title": "Gravida Value",
+      "type": "number",
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "tiers": [
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T7",
+          "T8",
+          "T10"
+        ],
+        "trimesters": [
+          "First",
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "para",
+      "title": "Para or Parity Value",
+      "type": "number",
+      "validation": [
+        "isDisabled",
+        "lessThan"
+      ],
+      "validationValue": {
+        "isDisabled": {
+          "name": "gravida"
+        },
+        "lessThan": {
+          "name": "gravida",
+          "diff": 0
+        }
+      },
+      "nonMandatoryIf": {
+        "tiers": [
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T7",
+          "T8",
+          "T10"
+        ],
+        "trimesters": [
+          "First",
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "abortion",
+      "title": "Abortion Value",
+      "type": "number",
+      "validation": [
+        "isDisabled",
+        "lessThan"
+      ],
+      "validationValue": {
+        "isDisabled": {
+          "name": "gravida"
+        },
+        "lessThan": {
+          "name": "gravida",
+          "diff": 0
+        }
+      },
+      "nonMandatoryIf": {
+        "tiers": [
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T7",
+          "T8",
+          "T10"
+        ],
+        "trimesters": [
+          "First",
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "live",
+      "title": "Live Value",
+      "type": "number",
+      "validation": [
+        "isDisabled"
+      ],
+      "validationValue": {
+        "isDisabled": {
+          "name": "gravida"
+        }
+      }
+    },
+    {
+      "name": "lmp",
+      "title": "LMP",
+      "type": "date",
+      "validation": [
+        "isRequiredIfValueIsNot"
+      ],
+      "validationValue": {
+        "isRequiredIfValueIsNot": {
+          "name": "crl",
+          "tiers": [
+            "T5",
+            "T8"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      }
+    },
+    {
+      "name": "lmp",
+      "title": "LMP",
+      "type": "date",
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "tiers": [
+          "T3",
+          "T4",
+          "T6"
+        ],
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "lmpCertainty",
+      "title": "LMP Certainty",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Regular",
+          "label": "Regular"
+        },
+        {
+          "value": "Irregular",
+          "label": "Irregular"
+        },
+        {
+          "value": "Unknown",
+          "label": "Unknown"
+        }
+      ],
+      "validation": [
+        "isRequiredIfValueIsNot"
+      ],
+      "validationValue": {
+        "isRequiredIfValueIsNot": {
+          "name": "crl",
+          "tiers": [
+            "T5",
+            "T8"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "nonMandatoryIf": {
+        "tiers": [
+          "T1",
+          "T2",
+          "T7",
+          "T10"
+        ],
+        "trimesters": [
+          "First"
+        ]
+      }
+    },
+    {
+      "name": "lmpCertainty",
+      "title": "LMP Certainty",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Regular",
+          "label": "Regular"
+        },
+        {
+          "value": "Irregular",
+          "label": "Irregular"
+        },
+        {
+          "value": "Unknown",
+          "label": "Unknown"
+        }
+      ],
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "tiers": [
+          "T3",
+          "T4",
+          "T6"
+        ],
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "historyOfDownSyndrome",
+      "title": "History of Down Syndrome",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T1",
+            "T2",
+            "T7",
+            "T8",
+            "T10"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      }
+    },
+    {
+      "name": "historyOfDownSyndrome",
+      "title": "History of Down Syndrome",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T3",
+            "T4"
+          ],
+          "trimesters": [
+            "Second"
+          ]
+        }
+      }
+    },
+    {
+      "name": "confirmatoryTestForHDS",
+      "title": "Confirmatory Test for Down Syndrome",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "historyOfDownSyndrome",
+          "values": [
+            "Yes"
+          ]
+        }
+      },
+      "message": {
+        "values": [
+          "No"
+        ],
+        "message": "Report will be needed for final Risk assessment."
+      }
+    },
+    {
+      "name": "historyOfEdwardSyndrome",
+      "title": "History of Edward's Syndrome",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T1",
+            "T2",
+            "T7",
+            "T8",
+            "T10"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      }
+    },
+    {
+      "name": "historyOfEdwardSyndrome",
+      "title": "History of Edward's Syndrome",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T3",
+            "T4"
+          ],
+          "trimesters": [
+            "Second"
+          ]
+        }
+      }
+    },
+    {
+      "name": "confirmatoryTestForHES",
+      "title": "Confirmatory Test for Edward's Syndrome?",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "historyOfEdwardSyndrome",
+          "values": [
+            "Yes"
+          ]
+        }
+      },
+      "message": {
+        "values": [
+          "No"
+        ],
+        "message": "Report will be needed for final Risk assessment."
+      }
+    },
+    {
+      "name": "historyOfPatauSyndrome",
+      "title": "History of Patau Syndrome",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T1",
+            "T2",
+            "T7",
+            "T8",
+            "T10"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      }
+    },
+    {
+      "name": "historyOfPatauSyndrome",
+      "title": "History of Patau Syndrome",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T3",
+            "T4"
+          ],
+          "trimesters": [
+            "Second"
+          ]
+        }
+      }
+    },
+    {
+      "name": "confirmatoryTestForHPS",
+      "title": "Confirmatory Test for Patau Syndrome?",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "historyOfPatauSyndrome",
+          "values": [
+            "Yes"
+          ]
+        }
+      },
+      "message": {
+        "values": [
+          "No"
+        ],
+        "message": "Report will be needed for final Risk assessment."
+      }
+    },
+    {
+      "name": "previousHistoryOfONTD",
+      "title": "Previous History of ONTD",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T1",
+            "T2",
+            "T7",
+            "T8",
+            "T10"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      }
+    },
+    {
+      "name": "previousHistoryOfONTD",
+      "title": "Previous History of ONTD",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T3",
+            "T4"
+          ],
+          "trimesters": [
+            "Second"
+          ]
+        }
+      }
+    },
+    {
+      "name": "peInPreviousPregnancy",
+      "title": "PE in Previous Pregnancy",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "tiers": [
+            "T1",
+            "T7",
+            "T8"
+          ],
+          "trimesters": [
+            "First"
+          ],
+          "name": "para",
+          "moreThan": 0
+        }
+      }
+    },
+    {
+      "name": "dateOfLastDelivery",
+      "title": "Date of Last Delivery",
+      "type": "date",
+      "validation": [
+        "isRequiredIfValue",
+        "isPastDate"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "tiers": [
+            "T7"
+          ],
+          "trimester": [
+            "First"
+          ],
+          "name": "para",
+          "moreThan": 0
+        }
+      }
+    },
+    {
+      "name": "previousSmallBaby",
+      "title": "Previous Small Baby",
+      "type": "radio",
+      "options": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        },
+        {
+          "label": "N/A",
+          "value": "N/A"
+        }
+      ],
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "tiers": [
+            "T7"
+          ],
+          "trimester": [
+            "First"
+          ],
+          "name": "para",
+          "moreThan": 0
+        }
+      }
+    },
+    {
+      "name": "diabetesStatus",
+      "title": "Diabetes Status (Insulin Dependent)",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T3",
+            "T4"
+          ],
+          "trimesters": [
+            "Second"
+          ]
+        }
+      }
+    },
+    {
+      "name": "diabetesStatus",
+      "title": "Diabetes Status (Insulin Dependent)",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T1",
+            "T2",
+            "T7",
+            "T8",
+            "T10"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      }
+    },
+    {
+      "name": "typeOfDiabetes",
+      "title": "Type of Diabetes",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Pre-Diabetic (Insulin started before pregnancy)",
+          "label": "Pre-Diabetic (Insulin started before pregnancy)"
+        },
+        {
+          "value": "Gestational Diabetes(Insulin started after pregnancy)",
+          "label": "Gestational Diabetes(Insulin started after pregnancy)"
+        }
+      ],
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "diabetesStatus",
+          "values": [
+            "Yes"
+          ]
+        }
+      }
+    },
+    {
+      "name": "bleedingOrSpotting",
+      "title": "Bleeding/Spotting in last two weeks",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "tiers": [
+          "T1",
+          "T2",
+          "T7",
+          "T8",
+          "T5",
+          "T9",
+          "T10"
+        ],
+        "trimesters": [
+          "First"
+        ]
+      }
+    },
+    {
+      "name": "bleedingOrSpotting",
+      "title": "Bleeding/Spotting in last two weeks",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "tiers": [
+          "T3",
+          "T4",
+          "T9"
+        ],
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "typeOfConception",
+      "title": "Type of Conception",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Natural",
+          "label": "Natural"
+        },
+        {
+          "value": "Assisted",
+          "label": "Assisted"
+        },
+        {
+          "value": "Ovulation drugs",
+          "label": "Ovulation drugs"
+        },
+        {
+          "value": "IUI",
+          "label": "IUI"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T1",
+            "T2",
+            "T7",
+            "T8",
+            "T5",
+            "T9",
+            "T10"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "nonMandatoryIf": {
+        "tiers": [
+          "T5"
+        ],
+        "trimesters": [
+          "First"
+        ]
+      }
+    },
+    {
+      "name": "typeOfConception",
+      "title": "Type of Conception",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Natural",
+          "label": "Natural"
+        },
+        {
+          "value": "Assisted",
+          "label": "Assisted"
+        },
+        {
+          "value": "Ovulation drugs",
+          "label": "Ovulation drugs"
+        },
+        {
+          "value": "IUI",
+          "label": "IUI"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T3",
+            "T4",
+            "T9"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      },
+      "nonMandatoryIf": {
+        "tiers": [
+          "T6"
+        ],
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "typeOfProcedure",
+      "title": "Type of Procedure",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Self IVF",
+          "label": "Self IVF"
+        },
+        {
+          "value": "Self ICSI",
+          "label": "Self ICSI"
+        },
+        {
+          "value": "Donor Egg",
+          "label": "Donor Egg"
+        }
+      ],
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "typeOfConception",
+          "values": [
+            "Assisted"
+          ]
+        }
+      }
+    },
+    {
+      "name": "extractionDate",
+      "title": "Extraction Date",
+      "type": "date",
+      "validation": [
+        "isPastDate",
+        "lessThan"
+      ],
+      "validationValue": {
+        "lessThan": {
+          "name": "sampleCollectionDate"
+        }
+      },
+      "nonMandatoryIf": {
+        "name": "typeOfConception",
+        "values": [
+          "Assisted"
+        ]
+      }
+    },
+    {
+      "name": "ageAtExtraction",
+      "title": "Age at Extraction",
+      "type": "date",
+      "validation": [
+        "isPastDate"
+      ],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "name": "typeOfConception",
+        "values": [
+          "Assisted"
+        ]
+      }
+    },
+    {
+      "name": "transferDate",
+      "title": "Transfer Date",
+      "type": "date",
+      "validation": [
+        "isRequiredIfValue",
+        "greaterThan"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "typeOfConception",
+          "values": [
+            "Assisted"
+          ]
+        },
+        "greaterThan": {
+          "name": "extractionDate",
+          "label": "Extraction Date",
+          "type": "days"
+        }
+      }
+    },
+    {
+      "name": "extractionDate",
+      "notAField": true,
+      "validation": [
+        "atLeastOne"
+      ],
+      "validationValue": {
+        "atLeastOne": {
+          "names": [
+            "ageAtExtraction",
+            "extractionDate"
+          ],
+          "titles": [
+            "Age at Extraction",
+            "Extraction Date"
+          ],
+          "values": [
+            "Assisted"
+          ],
+          "field": "typeOfConception"
+        }
+      }
+    },
+    {
+      "name": "donorDob",
+      "title": "Donor DOB",
+      "type": "date",
+      "validation": [
+        "isPastDate"
+      ],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "name": "typeOfProcedure",
+        "values": [
+          "Donor Egg"
+        ]
+      }
+    },
+    {
+      "name": "donorAge",
+      "title": "Donor Age",
+      "type": "date",
+      "validation": [
+        "isPastDate"
+      ],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "name": "typeOfProcedure",
+        "values": [
+          "Donor Egg"
+        ]
+      }
+    },
+    {
+      "notAField": true,
+      "validation": [
+        "atLeastOne"
+      ],
+      "validationValue": {
+        "atLeastOne": {
+          "names": [
+            "donorAge",
+            "donorDob"
+          ],
+          "titles": [
+            "Donor Age",
+            "Donor Dob"
+          ],
+          "field": "typeOfProcedure",
+          "values": [
+            "Donor Egg"
+          ]
+        }
+      },
+      "name": "donorDob"
+    },
+    {
+      "name": "bpOrMap",
+      "title": "BP or MAP",
+      "type": "radio",
+      "options": [
+        {
+          "label": "BP",
+          "value": "BP"
+        },
+        {
+          "value": "MAP",
+          "label": "MAP"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T7"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      }
+    },
+    {
+      "name": "bpOrMap",
+      "title": "BP or MAP",
+      "type": "radio",
+      "options": [
+        {
+          "label": "BP",
+          "value": "BP"
+        },
+        {
+          "value": "MAP",
+          "label": "MAP"
+        }
+      ],
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "tiers": [
+          "T6"
+        ],
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "bpMeasurementDate",
+      "title": "BP Measurement Date",
+      "type": "date",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "bpOrMap",
+          "values": [
+            "BP"
+          ]
+        }
+      }
+    },
+    {
+      "name": "bpLeftArmSystolicReading1",
+      "title": "BP Left Arm - Systolic Reading 1",
+      "type": "number",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "bpOrMap",
+          "values": [
+            "BP"
+          ]
+        }
+      }
+    },
+    {
+      "name": "bpLeftArmDiastolicReading1",
+      "title": "BP Left Arm - Diastolic Reading 1",
+      "type": "number",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "bpOrMap",
+          "values": [
+            "BP"
+          ]
+        }
+      }
+    },
+    {
+      "name": "bpLeftArmSystolicReading2",
+      "title": "BP Left Arm - Systolic Reading 2",
+      "type": "number",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "bpOrMap",
+          "values": [
+            "BP"
+          ]
+        }
+      }
+    },
+    {
+      "name": "bpRightArmDiastolicReading2",
+      "title": "BP Right Arm - Diastolic Reading 2",
+      "type": "number",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "bpOrMap",
+          "values": [
+            "BP"
+          ]
+        }
+      }
+    },
+    {
+      "name": "mapReading",
+      "title": "MAP Reading",
+      "type": "number",
+      "validation": [
+        "isRequiredIfValue"
+      ],
+      "validationValue": {
+        "isRequiredIfValue": {
+          "name": "bpOrMap",
+          "values": [
+            "MAP"
+          ]
+        }
+      }
+    },
+    {
+      "name": "familyHistoryOfPreEclampsia",
+      "title": "Family History of Pre-eclampsia",
+      "type": "dropDown",
+      "options": [
+        {
+          "value": "Not known",
+          "label": "Not known"
+        },
+        {
+          "value": "Not present",
+          "label": "Not present"
+        },
+        {
+          "value": "Patient",
+          "label": "Patient"
+        },
+        {
+          "value": "Mother",
+          "label": "Mother"
+        },
+        {
+          "value": "Both Patient and Mother",
+          "label": "Both Patient and Mother"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T7"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      }
+    },
+    {
+      "name": "familyHistoryOfPreEclampsia",
+      "title": "Family History of Pre-eclampsia",
+      "type": "dropDown",
+      "options": [
+        {
+          "value": "Not known",
+          "label": "Not known"
+        },
+        {
+          "value": "Not present",
+          "label": "Not present"
+        },
+        {
+          "value": "Patient",
+          "label": "Patient"
+        },
+        {
+          "value": "Mother",
+          "label": "Mother"
+        },
+        {
+          "value": "Both Patient and Mother",
+          "label": "Both Patient and Mother"
+        }
+      ],
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "tiers": [
+          "T6"
+        ],
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "chronicHypertension",
+      "title": "Chronic Hypertension",
+      "type": "dropDown",
+      "options": [
+        {
+          "value": "Not known",
+          "label": "Not known"
+        },
+        {
+          "value": "Not present",
+          "label": "Not present"
+        },
+        {
+          "value": "Medication",
+          "label": "Medication"
+        },
+        {
+          "value": "Untreated",
+          "label": "Untreated"
+        }
+      ],
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "tiers": [
+          "T6"
+        ],
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "chronicHypertension",
+      "title": "Chronic Hypertension",
+      "type": "dropDown",
+      "options": [
+        {
+          "value": "Not known",
+          "label": "Not known"
+        },
+        {
+          "value": "Not present",
+          "label": "Not present"
+        },
+        {
+          "value": "Medication",
+          "label": "Medication"
+        },
+        {
+          "value": "Untreated",
+          "label": "Untreated"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T7"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      }
+    },
+    {
+      "name": "uterineArteryPulsativeIndexRightPi",
+      "title": "Uterine Artery Pulsative Index - Right PI",
+      "type": "number",
+      "validation": [],
+      "validationValue": {}
+    },
+    {
+      "name": "uterineArteryPulsativeIndexLeftPi",
+      "title": "Uterine Artery Pulsative Index - Left PI",
+      "type": "number",
+      "validation": [],
+      "validationValue": {}
+    },
+    {
+      "name": "meanUterineArteryPulsativeIndex",
+      "title": "Mean Uterine Artery Pulsative Index",
+      "type": "number",
+      "validation": [],
+      "validationValue": {}
+    },
+    {
+      "notAField": true,
+      "name": "uterineArteryPulsativeIndexLeftPi",
+      "validation": [
+        "atLeastOne"
+      ],
+      "validationValue": {
+        "atLeastOne": {
+          "names": [
+            "uterineArteryPulsativeIndexLeftPi",
+            "uterineArteryPulsativeIndexLeftPi",
+            "meanUterineArteryPulsativeIndex"
+          ],
+          "titles": [
+            "Uterine Artery Pulsative Index - Right PI",
+            "Uterine Artery Pulsative Index - Left PI",
+            "Mean Uterine Artery Pulsative Index"
+          ],
+          "tiers": [
+            "T7"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      }
+    },
+    {
+      "name": "fhr",
+      "title": "FHR",
+      "type": "number",
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "tiers": [
+          "T1",
+          "T2",
+          "T7",
+          "T8",
+          "T10"
+        ],
+        "trimesters": [
+          "First"
+        ]
+      }
+    },
+    {
+      "name": "fhr",
+      "title": "FHR",
+      "type": "number",
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "tiers": [
+          "T3",
+          "T4"
+        ],
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "tricuspidRegurgitation",
+      "title": "Tricuspid regurgitation",
+      "type": "number",
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "tiers": [
+          "T1",
+          "T2",
+          "T7",
+          "T8",
+          "T10"
+        ],
+        "trimesters": [
+          "First"
+        ]
+      }
+    },
+    {
+      "name": "tricuspidRegurgitation",
+      "title": "Tricuspid regurgitation",
+      "type": "number",
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "tiers": [
+          "T3",
+          "T4"
+        ],
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "dvpi",
+      "title": "DVPI",
+      "type": "number",
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "tiers": [
+          "T3",
+          "T4"
+        ],
+        "trimesters": [
+          "Second"
+        ]
+      }
+    },
+    {
+      "name": "dvpi",
+      "title": "DVPI",
+      "type": "number",
+      "validation": [],
+      "validationValue": {},
+      "nonMandatoryIf": {
+        "tiers": [
+          "T1",
+          "T2",
+          "T7",
+          "T8",
+          "T10"
+        ],
+        "trimesters": [
+          "First"
+        ]
+      }
+    },
+    {
+      "name": "systemicLupusErythematous",
+      "title": "Systemic Lupus erythematous",
+      "type": "radio",
+      "options": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T7"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      }
+    },
+    {
+      "name": "antiphospholipidSyndrome``",
+      "title": "Antiphospholipid syndrome",
+      "type": "radio",
+      "options": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "validation": [
+        "isRequired"
+      ],
+      "validationValue": {
+        "isRequired": {
+          "tiers": [
+            "T7"
+          ],
+          "trimesters": [
+            "First"
+          ]
+        }
+      }
+    }
+  ]
+}

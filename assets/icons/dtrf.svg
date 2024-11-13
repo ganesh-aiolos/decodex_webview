@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+<svg xmlns="http://www.w3.org/2000/svg" width="21.331" height="23.998" viewBox="0 0 21.331 23.998"><defs><style>.a,.b,.d{fill:none;}.a,.b{stroke:#fff;stroke-linecap:round;stroke-width:2px;}.a{stroke-linejoin:round;}.c{stroke:none;}</style></defs><g transform="translate(-441 -51)"><g class="a" transform="translate(441 51)"><rect class="c" width="21.331" height="23.998" rx="4"/><rect class="d" x="1" y="1" width="19.331" height="21.998" rx="3"/></g><line class="b" x2="7.805" transform="translate(446.999 56.999)"/><line class="b" x2="7.805" transform="translate(446.999 64.999)"/><line class="b" x2="6.666" transform="translate(446.999 60.999)"/></g></svg>
+=======
+<svg height="21" viewBox="0 0 18.667 21" width="18.667" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"><g stroke-linejoin="round"><rect height="21" rx="4" stroke="none" width="18.667"/><rect fill="none" height="19.5" rx="3.25" width="17.167" x=".75" y=".75"/></g><path d="m5.25 5.25h6.83"/><path d="m5.25 12.25h6.83"/><path d="m5.25 8.75h5.833"/></g></svg>
+>>>>>>> 8393d0f919568e564d11a3223c4726589ebe02e1

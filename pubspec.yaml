@@ -1,0 +1,59 @@
+name: dtrf_app
+description: A new Flutter application.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.19+19
+
+environment:
+  sdk: '>=2.17.0 <3.0.0'
+
+dependencies:
+
+  flutter:
+    sdk: flutter # Add this line
+  flutter_svg: ^2.0.14
+  flutter_inappwebview: ^5.8.0
+
+dependency_overrides:
+  #firebase_core_platform_interface: 4.5.1
+
+
+dev_dependencies:
+  test:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+
+
+    - assets/images/
+
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/popins/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/popins/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/popins/Poppins-SemiBold.ttf
+          weight: 600
+    - family: SF
+      fonts:
+        - asset: assets/fonts/Helvetica.ttf
+          weight: 400
+        - asset: assets/fonts/Helvetica.ttf
+          weight: 500
+          style: normal
+        - asset: assets/fonts/Helvetica.ttf
+          weight: 700
+        - asset: assets/fonts/Helvetica.ttf
+          weight: 800
