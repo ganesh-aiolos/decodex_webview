@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 
 
 import 'package:flutter/foundation.dart';
-import 'UI/Splash/Splash.dart';
+import 'UI/Screens/OrderTestDTRF/order_test_dtrf.dart';
 import 'app/DTRFThemes.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -17,7 +17,7 @@ final RouteObserver<ModalRoute> routeObserver = RouteObserver<ModalRoute>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  //await InAppWebViewController.setWebContentsDebuggingEnabled(true);
 
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
@@ -52,7 +52,7 @@ class MyAppGetX extends StatelessWidget {
 
 
 
-      home: Splash(),
+      home: OrderTestDTRFScreen(),
     );
   }
 }

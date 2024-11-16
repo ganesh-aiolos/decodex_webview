@@ -69,19 +69,7 @@
         </activity>
 
 
-        <activity
-            android:name="com.apero.doctor_app.JitsiMeetPluginActivity"
-            android:exported="false"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-            android:resizeableActivity="true"
-            android:supportsPictureInPicture="true"
-            android:windowSoftInputMode="adjustResize"
-            />
 
-        <activity
-            android:name="com.yalantis.ucrop.UCropActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         
         <provider
             android:name="androidx.core.content.FileProvider"
