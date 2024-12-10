@@ -106,7 +106,7 @@ class _InAppWebViewExampleScreenState extends State<OrderTestDTRFScreen> {
 
                     InAppWebView(
                       key: webViewKey,
-                      initialUrlRequest: URLRequest(url: WebUri('https://decodex-dev.encore.health')),
+                      initialUrlRequest: URLRequest(url: WebUri('https://claims.aiolos.solutions')),
                       initialUserScripts: UnmodifiableListView<UserScript>([]),
                       initialSettings: settings,
                       contextMenu: contextMenu,
@@ -181,9 +181,7 @@ class _InAppWebViewExampleScreenState extends State<OrderTestDTRFScreen> {
 
                       pullToRefreshController: pullToRefreshController,
                     ),
-                  progress < 1.0
-                        ? LinearProgressIndicator(value: progress)
-                        : Container(),
+
                   ],
                 ),
               ),
