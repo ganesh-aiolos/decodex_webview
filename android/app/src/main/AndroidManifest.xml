@@ -23,7 +23,7 @@
         android:allowBackup="false"
         android:name="${applicationName}"
         tools:replace="android:label,android:allowBackup,android:name"
-        android:label="Lilac Doctor"
+        android:label="Encore AIPA"
         android:icon="@mipmap/ic_launcher"
         android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme.NoActionBar"

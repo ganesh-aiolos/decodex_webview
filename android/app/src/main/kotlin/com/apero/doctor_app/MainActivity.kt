@@ -11,7 +11,7 @@ import org.jitsi.meet.sdk.JitsiMeetConferenceOptions
 import org.jitsi.meet.sdk.JitsiMeetUserInfo*/
 
 
-class MainActivity: FlutterActivity()
+class MainActivity: FlutterActivity(){
 
 
 }
