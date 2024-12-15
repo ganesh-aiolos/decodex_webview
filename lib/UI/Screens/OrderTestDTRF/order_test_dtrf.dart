@@ -106,7 +106,7 @@ class _InAppWebViewExampleScreenState extends State<OrderTestDTRFScreen> {
 
                     InAppWebView(
                       key: webViewKey,
-                      initialUrlRequest: URLRequest(url: WebUri('https://claims.aiolos.solutions')),
+                      initialUrlRequest: URLRequest(url: WebUri('https://reclaimnow.ai')),
                       initialUserScripts: UnmodifiableListView<UserScript>([]),
                       initialSettings: settings,
                       contextMenu: contextMenu,
